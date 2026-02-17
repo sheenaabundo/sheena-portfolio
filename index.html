@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheena Monalyn A. Abundo, CPA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary:#0f172a;
+    --gold:#bfa14a;
+    --light:#f8fafc;
+    --gray:#64748b;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--light);
+    color:var(--primary);
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    background:rgba(255,255,255,0.95);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+nav h3{
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:500;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* HERO */
+header{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 8% 60px 8%;
+}
+
+.hero{
+    display:flex;
+    gap:60px;
+    align-items:center;
+    max-width:1100px;
+    flex-wrap:wrap;
+}
+
+.profile-pic{
+    width:240px;
+    height:240px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 20px 50px rgba(0,0,0,0.1);
+}
+
+.hero-text h1{
+    font-family:'Playfair Display',serif;
+    font-size:3rem;
+}
+
+.hero-text h1 span{
+    color:var(--gold);
+}
+
+.hero-text p{
+    margin-top:15px;
+    font-size:1.1rem;
+    color:var(--gray);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    background:var(--primary);
+    color:white;
+    transition:0.3s;
+    margin-right:10px;
+}
+
+.btn:hover{
+    background:var(--gold);
+}
+
+/* SECTION */
+section{
+    padding:100px 8%;
+    max-width:1100px;
+    margin:auto;
+}
+
+h2{
+    font-family:'Playfair Display',serif;
+    font-size:2rem;
+    margin-bottom:20px;
+    position:relative;
+}
+
+h2::after{
+    content:"";
+    width:60px;
+    height:3px;
+    background:var(--gold);
+    position:absolute;
+    left:0;
+    bottom:-10px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.05);
+    margin-bottom:25px;
+}
+
+/* METRICS */
+.metrics{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+    margin-top:40px;
+}
+
+.metric{
+    padding:20px;
+}
+
+.metric h3{
+    font-size:2rem;
+    color:var(--gold);
+}
+
+.metric p{
+    margin-top:10px;
+    font-weight:500;
+}
+
+/* LOGOS */
+.executive-logo-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:40px;
+    margin-top:40px;
+}
+
+.executive-logo{
+    text-align:center;
+    padding:30px 20px;
+    border-radius:12px;
+    background:white;
+    border:1px solid #e5e7eb;
+    transition:0.4s;
+}
+
+.executive-logo img{
+    width:45px;
+    opacity:0.7;
+    margin-bottom:15px;
+    transition:0.4s;
+}
+
+.executive-logo span{
+    font-size:0.95rem;
+    font-weight:500;
+}
+
+.executive-logo:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold);
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+.executive-logo:hover img{
+    opacity:1;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:50px;
+    background:var(--primary);
+    color:white;
+}
+
+/* FADE */
+.fade{
+    opacity:0;
+    transform:translateY(20px);
+    transition:0.8s;
+}
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h3>Clarity in Every Number</h3>
+    <div>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#expertise">Expertise</a>
+        <a href="https://www.linkedin.com/in/sheena-monalyn-abundo-cpa-0bb12719b" target="_blank">LinkedIn</a>
+    </div>
+</nav>
+
+<header>
+    <div class="hero">
+        <img src="sheena.jpg" alt="Sheena Abundo" class="profile-pic">
+        <div class="hero-text">
+            <h1>Sheena Monalyn A. Abundo, CPA</h1>
+            <p>Accounting Manager | Financial Reporting Leader | US-Based Client Specialist</p>
+            <a href="#experience" class="btn">View Experience</a>
+            <a href="https://www.linkedin.com/in/sheena-monalyn-abundo-cpa-0bb12719b" target="_blank" class="btn">LinkedIn Profile</a>
+        </div>
+    </div>
+</header>
+
+<section id="about" class="fade">
+    <h2>Executive Summary</h2>
+    <div class="card">
+        Certified Public Accountant with leadership experience in audit, bookkeeping,
+        and financial reporting for US-based clients. Proven ability to manage
+        accounting teams, oversee multi-client engagements, and deliver timely,
+        accurate financial insights for decision-making.
+    </div>
+
+    <div class="metrics">
+        <div class="metric">
+            <h3>6+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="metric">
+            <h3>Multiple</h3>
+            <p>US Clients Managed</p>
+        </div>
+        <div class="metric">
+            <h3>CPA</h3>
+            <p>Licensed Professional</p>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="fade">
+    <h2>Professional Experience</h2>
+
+    <div class="card">
+        <strong>Accounting Manager – DSO CFO LLC</strong><br>
+        2023 – Present | Utah, USA
+    </div>
+
+    <div class="card">
+        <strong>Bookkeeper – Walter Sabolboro DDS PLLC</strong><br>
+        2024 – Present | New York, USA
+    </div>
+
+    <div class="card">
+        <strong>General Accountant – ConnectOS Asia</strong><br>
+        2022 – 2023
+    </div>
+
+    <div class="card">
+        <strong>Audit Associate – EY Philippines</strong><br>
+        2019 – 2021
+    </div>
+</section>
+
+<section id="expertise" class="fade">
+    <h2>Expertise & Platforms</h2>
+
+    <div class="executive-logo-grid">
+
+        <div class="executive-logo">
+            <img src="https://cdn.simpleicons.org/quickbooks/000000">
+            <span>QuickBooks</span>
+        </div>
+
+        <div class="executive-logo">
+            <img src="https://cdn.simpleicons.org/xero/000000">
+            <span>Xero</span>
+        </div>
+
+        <div class="executive-logo">
+            <img src="https://cdn.simpleicons.org/adp/000000">
+            <span>ADP</span>
+        </div>
+
+        <div class="executive-logo">
+            <img src="https://cdn.simpleicons.org/shopify/000000">
+            <span>Shopify</span>
+        </div>
+
+        <div class="executive-logo">
+            <img src="https://cdn.simpleicons.org/expensify/000000">
+            <span>Expensify</span>
+        </div>
+        <div class="executive-logo">
+            <img src="https://cdn.simpleicons.org/Gusto/000000">
+            <span>Gusto</span>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Sheena Monalyn A. Abundo, CPA<br><br>
+    abundosheenamonalyn@gmail.com | 0962-670-7044
+</footer>
+
+<script>
+const fades=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{threshold:0.2});
+fades.forEach(fade=>observer.observe(fade));
+</script>
+
+</body>
+</html>
